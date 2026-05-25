@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacilePlan — Il tuo calendario turni sempre a portata di mano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --accent: #007AFF;
+            --accent-dark: #0056CC;
+            --gradient-start: #007AFF;
+            --gradient-end: #5856D6;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .hero {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: #fff;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: #fff;
+            border-radius: 50% 50% 0 0;
+        }
+        .hero-icon {
+            font-size: 4rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            background: rgba(255,255,255,.2);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 24px;
+        }
+        .hero h1 { font-size: 2.8rem; font-weight: 700; }
+        .hero p { font-size: 1.2rem; opacity: .9; }
+        .btn-hero {
+            background: #fff;
+            color: var(--accent);
+            border: none;
+            padding: 14px 36px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform .2s;
+        }
+        .btn-hero:hover { transform: scale(1.04); color: var(--accent-dark); }
+        .feature-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,.06);
+            transition: transform .25s, box-shadow .25s;
+            height: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,0,0,.1);
+        }
+        .feature-icon {
+            font-size: 2.4rem;
+            color: var(--accent);
+        }
+        .section-title { font-weight: 700; margin-bottom: .5rem; }
+        .section-subtitle { color: #6c757d; font-size: 1.1rem; }
+        .bg-gradient-light {
+            background: linear-gradient(180deg, #f8f9ff 0%, #fff 100%);
+        }
+        .mockup-placeholder {
+            background: linear-gradient(135deg, #e8ecff, #f0f0ff);
+            border-radius: 32px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,122,255,.15);
+        }
+        .mockup-placeholder i {
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: .6;
+        }
+        .screenshot-card {
+            transition: transform .25s;
+            cursor: default;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-4px);
+        }
+        .screenshot-card img {
+            background: linear-gradient(135deg, #e8ecff, #f0f0ff);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,122,255,.15);
+            width: 100%;
+            height: auto;
+        }
+        .footer { background: #1a1a2e; color: rgba(255,255,255,.7); }
+        .footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+        .footer a:hover { color: #fff; }
+        @media (max-width: 768px) {
+            .hero { padding: 60px 0 60px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-calendar-check text-primary me-1"></i> FacilePlan
+        </a>
+        <div>
+            <a href="support.html" class="btn btn-outline-primary btn-sm rounded-pill px-4">
+                <i class="bi bi-question-circle me-1"></i> Assistenza
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero text-center">
+    <div class="container position-relative" style="z-index:1;">
+        <div class="hero-icon mx-auto">
+            <i class="bi bi-calendar-check"></i>
+        </div>
+        <h1>FacilePlan</h1>
+        <p class="mb-4 mx-auto" style="max-width:560px;">
+            Il calendario turni del portale sempre con te. Timeline, statistiche, eventi e PDF in un'app pensata per gestire i turni con facilità!
+        </p>
+        <a href="#features" class="btn btn-hero">
+            <i class="bi bi-arrow-down me-2"></i> Scopri di più
+        </a>
+    </div>
+</header>
+
+<!-- Features -->
+<section id="features" class="py-5 bg-gradient-light">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Tutto quello che ti serve</h2>
+            <p class="section-subtitle">Progettato per chi lavora su turni.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-calendar-week"></i></div>
+                        <h5 class="fw-bold">Timeline settimanale</h5>
+                        <p class="text-secondary mb-0">Visualizza i turni su una timeline stile calendario. Scorri tra le settimane con un gesto.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-shield-lock"></i></div>
+                        <h5 class="fw-bold">Accesso sicuro</h5>
+                        <p class="text-secondary mb-0">Login automatico tramite WebView con supporto TOTP. I dati sensibili sono protetti nel Keychain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-filetype-pdf"></i></div>
+                        <h5 class="fw-bold">PDF calendario</h5>
+                        <p class="text-secondary mb-0">Scarica il calendario in PDF e visualizzalo subito con QuickLook. I PDF restano salvati sul telefono.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-plus-circle-dotted"></i></div>
+                        <h5 class="fw-bold">Crea eventi</h5>
+                        <p class="text-secondary mb-0">Tieni premuto sulla timeline per creare un nuovo turno o appuntamento direttamente dall'app.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h5 class="fw-bold">Statistiche</h5>
+                        <p class="text-secondary mb-0">Controlla le ore lavorate, i turni notturni e festivi con grafici chiari e aggiornati.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card p-4">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3"><i class="bi bi-arrow-left-right"></i></div>
+                        <h5 class="fw-bold">Cambi turni</h5>
+                        <p class="text-secondary mb-0">Ricevi notifiche quando i turni vengono modificati, aggiunti o rimossi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- App Preview -->
+<section class="py-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="section-title">Progettata per iOS 26</h2>
+                <p class="section-subtitle">Interfaccia nativa con SwiftUI, ottimizzata per iPhone e iPad.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Calendario turni sempre aggiornato</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Crea ed elimina eventi direttamente dal calendario</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Conteggio ore e statistiche</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Download e memorizzazione PDF</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Avvisi cambio turno</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Login automatico con supporto TOTP</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-5">
+                        <div class="screenshot-card">
+                            <img src="screenshot/calendar.png" alt="Calendario turni" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="screenshot-card">
+                            <img src="screenshot/authenticator.png" alt="Autenticazione TOTP" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5" style="background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end)); color:#fff;">
+    <div class="container text-center py-4">
+        <h2 class="fw-bold mb-3">Pronto a semplificare i tuoi turni?</h2>
+        <p class="mb-4" style="opacity:.9; max-width:480px; margin:0 auto 1.5rem;">
+            Scarica FacilePlan dall'App Store e accedi al portale in modo semplice e veloce.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="support.html" class="btn btn-outline-light rounded-pill px-5 py-3 fw-semibold">
+                <i class="bi bi-envelope me-2"></i> Assistenza
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-4 text-center">
+    <div class="container">
+        <p class="mb-1">&copy; 2026 FacilePlan</p>
+        <p class="mb-0 small">
+            <a href="index.html">Home</a> &middot;
+            <a href="support.html">Assistenza</a> &middot;
+            <a href="privacy.html">Privacy</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

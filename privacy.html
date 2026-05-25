@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — FacilePlan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --accent: #007AFF;
+            --accent-dark: #0056CC;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .page-header {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: #fff;
+            padding: 70px 0 60px;
+        }
+        .page-header h1 { font-weight: 700; font-size: 2.4rem; }
+        .page-header p { opacity: .9; font-size: 1.1rem; }
+        .content-section {
+            padding: 60px 0;
+        }
+        .content-section h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+        .content-section h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: .75rem;
+            color: #1a1a2e;
+        }
+        .content-section p, .content-section li {
+            color: #4a4a6a;
+            line-height: 1.7;
+        }
+        .content-section .card-highlight {
+            background: #f8f9ff;
+            border: none;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 1.5rem 0;
+        }
+        .footer { background: #1a1a2e; color: rgba(255,255,255,.7); }
+        .footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+        .footer a:hover { color: #fff; }
+        .last-updated {
+            font-size: .9rem;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-calendar-check text-primary me-1"></i> FacilePlan
+        </a>
+        <div>
+            <a href="index.html" class="btn btn-outline-primary btn-sm rounded-pill px-4">
+                <i class="bi bi-arrow-left me-1"></i> Home
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="page-header text-center">
+    <div class="container">
+        <i class="bi bi-shield-check" style="font-size:3.5rem; opacity:.8; display:block; margin-bottom:.75rem;"></i>
+        <h1>Privacy Policy</h1>
+        <p class="mx-auto" style="max-width:520px;">Come trattiamo e proteggiamo i tuoi dati personali.</p>
+    </div>
+</header>
+
+<!-- Content -->
+<section class="content-section">
+    <div class="container" style="max-width:800px;">
+
+        <p class="lead">
+            La presente Informativa sulla Privacy descrive come FacilePlan raccoglie, utilizza e protegge
+            i dati personali degli utenti dell'applicazione.
+        </p>
+
+        <h2>1. Titolare del trattamento</h2>
+        <p>
+            Il titolare del trattamento dei dati è lo sviluppatore dell'applicazione FacilePlan.
+            Per qualsiasi richiesta relativa alla privacy, contattaci tramite
+            <a href="https://github.com/JostenSyon/FacilePlan/issues">GitHub Issues</a>.
+        </p>
+
+        <h2>2. Dati raccolti</h2>
+        <p>FacilePlan raccoglie e memorizza esclusivamente i dati necessari al funzionamento dell'app:</p>
+        <ul>
+            <li><strong>Credenziali di accesso:</strong> username, password e segreto TOTP inseriti dall'utente per accedere al portale turni.</li>
+            <li><strong>Cookie di sessione:</strong> cookie generati dal portale dopo l'autenticazione, necessari per mantenere la sessione attiva.</li>
+            <li><strong>Dati dei turni:</strong> informazioni sui turni scaricate dal portale e memorizzate localmente per la visualizzazione offline.</li>
+        </ul>
+        <p>L'app <strong>non</strong> raccoglie dati di navigazione, dati di utilizzo, identificatori pubblicitari, dati di localizzazione o qualsiasi altra informazione personale non strettamente necessaria.</p>
+
+        <div class="card-highlight">
+            <i class="bi bi-key" style="font-size:1.5rem; color:var(--accent); display:block; margin-bottom:.75rem;"></i>
+            <h5 class="fw-bold mb-2">Dove vengono conservati i dati</h5>
+            <p class="mb-0">
+                Tutti i dati vengono memorizzati <strong>esclusivamente sul dispositivo</strong> dell'utente.
+                Le credenziali sono protette nel Keychain di iOS (criptato hardware). I turni sono salvati
+                in un database SQLite locale. I PDF scaricati sono nella cartella Documenti/PDFs/ dell'app.
+            </p>
+        </div>
+
+        <h2>3. Finalità del trattamento</h2>
+        <p>I dati raccolti vengono utilizzati esclusivamente per:</p>
+        <ul>
+            <li>Autenticare l'utente presso il portale turni</li>
+            <li>Scaricare e visualizzare i turni</li>
+            <li>Generare e salvare PDF del calendario</li>
+            <li>Mantenere la sessione di login attiva</li>
+        </ul>
+
+        <h2>4. Base giuridica</h2>
+        <p>
+            Il trattamento dei dati è basato sul <strong>consenso</strong> dell'utente (Art. 6(1)(a) GDPR),
+            espresso al momento della configurazione iniziale dell'app tramite il wizard di configurazione.
+            L'utente può revocare il consenso in qualsiasi momento utilizzando la funzione
+            "Ripristina applicazione" nelle Impostazioni, che cancella tutti i dati memorizzati.
+        </p>
+
+        <h2>5. Condivisione dei dati</h2>
+        <p>
+            FacilePlan <strong>non condivide</strong> i dati dell'utente con terze parti. L'app comunica
+            esclusivamente con il portale turni configurato dall'utente per autenticarsi e scaricare i dati.
+            Non vengono utilizzati servizi di analytics, pubblicità o monitoraggio.
+        </p>
+
+        <h2>6. Trasferimento dei dati</h2>
+        <p>
+            I dati non vengono trasferiti al di fuori del dispositivo dell'utente. L'unica comunicazione
+            esterna avviene con il portale turni scelto dall'utente, attraverso una connessione HTTPS crittografata.
+        </p>
+
+        <h2>7. Periodo di conservazione</h2>
+        <p>
+            I dati vengono conservati sul dispositivo fino a quando l'utente non decide di eliminarli
+            tramite la funzione "Ripristina applicazione" o disinstallando l'app.
+            I cookie di sessione vengono eliminati automaticamente al logout.
+        </p>
+
+        <h2>8. Diritti dell'utente</h2>
+        <p>
+            FacilePlan non memorizza dati personali su server esterni: tutti i dati risiedono
+            esclusivamente sul dispositivo dell'utente. Pertanto, l'utente può esercitare
+            i propri diritti in modo diretto:
+        </p>
+        <ul>
+            <li><strong>Cancellazione:</strong> tramite il pulsante "Ripristina applicazione" nelle Impostazioni, che cancella tutti i dati locali (credenziali, turni, PDF e preferenze), oppure disinstallando l'applicazione.</li>
+            <li><strong>Accesso:</strong> tutti i dati memorizzati sono visibili direttamente all'interno dell'app (calendario turni, PDF salvati).</li>
+            <li><strong>Rettifica:</strong> modificando le credenziali tramite il wizard di configurazione.</li>
+            <li><strong>Portabilità:</strong> i dati possono essere esportati tramite backup del dispositivo (iTunes/iCloud).</li>
+        </ul>
+
+        <h2>9. Sicurezza</h2>
+        <p>
+            Adottiamo le seguenti misure di sicurezza per proteggere i tuoi dati:
+        </p>
+        <ul>
+            <li>Le credenziali sono crittografate nel Keychain di iOS (hardware-backed encryption)</li>
+            <li>Tutte le comunicazioni avvengono tramite HTTPS/TLS</li>
+            <li>Il database locale è accessibile solo dall'app</li>
+            <li>I cookie di sessione non vengono condivisi con applicazioni di terze parti</li>
+        </ul>
+
+        <h2>10. Modifiche alla privacy policy</h2>
+        <p>
+            Eventuali modifiche a questa informativa verranno pubblicate su questa pagina.
+            Gli utenti verranno informati attraverso l'app in caso di cambiamenti sostanziali.
+        </p>
+
+        <h2>11. Contatti</h2>
+        <p>
+            Per domande riguardanti questa privacy policy o il trattamento dei tuoi dati personali,
+            apri una issue su 
+            <a href="https://github.com/JostenSyon/FacilePlan/issues">GitHub</a>.
+        </p>
+
+        <p class="last-updated">
+            <i class="bi bi-clock me-1"></i> Ultimo aggiornamento: 20 maggio 2026
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer py-4 text-center">
+    <div class="container">
+        <p class="mb-1">&copy; 2026 FacilePlan</p>
+        <p class="mb-0 small">
+            <a href="index.html">Home</a> &middot;
+            <a href="support.html">Assistenza</a> &middot;
+            <a href="privacy.html">Privacy</a>
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
